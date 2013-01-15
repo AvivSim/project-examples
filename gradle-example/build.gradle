@@ -73,15 +73,10 @@ uploadPublished
 	                
 	      repositories 
 		  {
-		ivy {
+		    ivy {
 			     url 'http://jbaruch.artifactoryonline.com/jbaruch/support-team-snapshots-local'
-			     credentials
-			      {
-				    username 'avivs'
-				    password "{DESede}KHT9FW0we0A="
-			      }
-		    }
-	      }
+		        }
+	         }
 		  
 		  
 	
@@ -107,8 +102,8 @@ configurations {
 
 
 artifactory {
-  //contextUrl = 'http://repo.jfrog.org/artifactory'
-  contextUrl = 'http://repo-demo:8080/artifactory'
+  contextUrl = 'http://repo.jfrog.org/artifactory'
+  //contextUrl = 'http://repo-demo:8080/artifactory'
   publish {
     repository {
       repoKey = 'gradle-snapshot-local' //The Artifactory repository key to publish to
