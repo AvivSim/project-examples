@@ -67,6 +67,27 @@ subprojects {
       from javadoc.destinationDir
     }
 
+uploadPublished
+  {
+	   dependsOn build
+	                
+	      repositories 
+		  {
+		ivy {
+			     url 'http://jbaruch.artifactoryonline.com/jbaruch/support-team-snapshots-local'
+			     credentials
+			      {
+				    username 'avivs'
+				    password "{DESede}KHT9FW0we0A="
+			      }
+		    }
+	      }
+		  
+		  
+	
+    }
+
+
     artifactoryPublish {
       dependsOn sourceJar, javadocJar
     }
