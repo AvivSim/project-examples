@@ -33,7 +33,7 @@ import java.text.SimpleDateFormat
 def globalVersion = new Version(currentVersion)
 
 allprojects {
-  apply plugin: 'artifactory'
+ // apply plugin: 'artifactory'
   apply plugin: 'idea'
   configure(subprojects.findAll { new File(it.projectDir, 'src').directory }) {
     apply plugin: 'java'
@@ -102,7 +102,7 @@ configurations {
 
 
 artifactory {
-  contextUrl = 'http://repo.jfrog.org/artifactory'
+  //contextUrl = 'http://repo.jfrog.org/artifactory'
   //contextUrl = 'http://repo-demo:8080/artifactory'
   publish {
     repository {
