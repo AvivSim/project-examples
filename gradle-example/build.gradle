@@ -79,6 +79,9 @@ configurations {
 
 
 artifactory {
+  System.setProperty('buildInfoConfig.includeEnvVars','true')
+  System.setProperty('buildInfoConfig.envVarsIncludePatterns','*aviv*')
+  System.setProperty('aviv','test')
   contextUrl = 'http://localhost:8081/artifactory'
   publish {
     repository {
