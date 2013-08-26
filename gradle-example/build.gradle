@@ -79,9 +79,10 @@ configurations {
 
 
 artifactory {
-  System.setProperty('buildInfoConfig.includeEnvVars','true')
-  System.setProperty('buildInfoConfig.envVarsIncludePatterns','*aviv*')
-  System.setProperty('aviv','test')
+  clientConfig.setIncludeEnvVars(true) // Capture all environment variables and system variables
+  clientConfig.setEnvVarsIncludePatterns('jfr?g*') // filter the list for custom ones only
+  clientConfig.info.addEnvironmentProperty('jfrog', 'jfrog')
+  System.setProperty('jfrog.artifactory', '3.0.3')
   contextUrl = 'http://localhost:8081/artifactory'
   publish {
     repository {
